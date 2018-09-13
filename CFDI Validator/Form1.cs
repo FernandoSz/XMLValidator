@@ -61,7 +61,44 @@ namespace CFDI_Validator
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-           
+            pnlDescargas.Visible = false;
+
+            pnlVisorReportes.Visible = true;
+        }
+
+        private void btnBuscarFolder_Click(object sender, EventArgs e)
+        {
+           searchFolder.ShowDialog();
+        }
+
+        private void btnEmitidas_Click(object sender, EventArgs e)
+        {
+
+            pnlVisorReportes.Visible = false;
+            pnlDescargas.Visible = false;
+            pnlnewdowload.Visible = true;
+            lblTipoFactura.Text = "Facturas Emitidas:";
+            txtEmisor.Text = "SAF2111945R1";
+            lblReceptorReq.Visible = true;
+            lblEmisorReq.Visible = false;
+            pnlDescargas.Visible = false;
+
+
+        }
+
+        private void btnRemitidas_Click(object sender, EventArgs e)
+        {
+            pnlVisorReportes.Visible = false;
+            pnlDescargas.Visible = false;
+            pnlnewdowload.Visible = true;
+            lblTipoFactura.Text = "Facturas Remitidas:";
+            txtReceptor.Text = "SAF2111945R1";
+            txtEmisor.Enabled = true;
+            txtEmisor.Text = "";
+            lblReceptorReq.Visible = false;
+            lblEmisorReq.Visible = true;
+            pnlDescargas.Visible = false;
+
         }
     }
 }
