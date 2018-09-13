@@ -95,10 +95,17 @@ namespace CFDI_Validator
             txtReceptor.Text = "SAF2111945R1";
             txtEmisor.Enabled = true;
             txtEmisor.Text = "";
+            txtReceptor.Enabled = false;
             lblReceptorReq.Visible = false;
             lblEmisorReq.Visible = true;
             pnlDescargas.Visible = false;
 
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            VisorReporte formReporte = new VisorReporte();
+            formReporte.Visible = true;
         }
     }
 }

@@ -47,18 +47,6 @@
             this.txtServidor = new System.Windows.Forms.TextBox();
             this.txtBD = new System.Windows.Forms.TextBox();
             this.txtTabla = new System.Windows.Forms.TextBox();
-            this.btnRemitidas = new System.Windows.Forms.Button();
-            this.btnEmitidas = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.btnDescargas = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSiguiente = new System.Windows.Forms.Button();
-            this.btnBuscarServer = new System.Windows.Forms.Button();
-            this.btnBuscarFolder = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.directorsearch = new System.DirectoryServices.DirectorySearcher();
             this.lblTipoFactura = new System.Windows.Forms.Label();
@@ -72,17 +60,29 @@
             this.lblFinEmision = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.bntNext = new System.Windows.Forms.Button();
             this.pnlnewdowload = new System.Windows.Forms.Panel();
+            this.btnRemitidas = new System.Windows.Forms.Button();
+            this.btnEmitidas = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnDescargas = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnBuscarServer = new System.Windows.Forms.Button();
+            this.btnBuscarFolder = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bntNext = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlTipos.SuspendLayout();
             this.pnlDescargas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDescargas)).BeginInit();
             this.pnlVisorReportes.SuspendLayout();
+            this.pnlnewdowload.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlnewdowload.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,9 +103,9 @@
             this.lblRFCSave.ForeColor = System.Drawing.Color.White;
             this.lblRFCSave.Location = new System.Drawing.Point(484, 13);
             this.lblRFCSave.Name = "lblRFCSave";
-            this.lblRFCSave.Size = new System.Drawing.Size(86, 17);
+            this.lblRFCSave.Size = new System.Drawing.Size(115, 17);
             this.lblRFCSave.TabIndex = 8;
-            this.lblRFCSave.Text = "RFC Emisor:";
+            this.lblRFCSave.Text = "CGHO271194R7";
             this.lblRFCSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -136,7 +136,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(3, 437);
+            this.lblFecha.Location = new System.Drawing.Point(23, 440);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(35, 13);
             this.lblFecha.TabIndex = 7;
@@ -287,6 +287,138 @@
             this.txtTabla.TabIndex = 11;
             this.txtTabla.Text = "Emitidos";
             // 
+            // directorsearch
+            // 
+            this.directorsearch.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorsearch.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorsearch.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // lblTipoFactura
+            // 
+            this.lblTipoFactura.AutoSize = true;
+            this.lblTipoFactura.Location = new System.Drawing.Point(315, 13);
+            this.lblTipoFactura.Name = "lblTipoFactura";
+            this.lblTipoFactura.Size = new System.Drawing.Size(57, 20);
+            this.lblTipoFactura.TabIndex = 0;
+            this.lblTipoFactura.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(75, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "RFC Emisor:";
+            // 
+            // txtEmisor
+            // 
+            this.txtEmisor.Enabled = false;
+            this.txtEmisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmisor.Location = new System.Drawing.Point(165, 74);
+            this.txtEmisor.Name = "txtEmisor";
+            this.txtEmisor.Size = new System.Drawing.Size(176, 20);
+            this.txtEmisor.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(394, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 19);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "RFC Receptor:";
+            // 
+            // txtReceptor
+            // 
+            this.txtReceptor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceptor.Location = new System.Drawing.Point(505, 73);
+            this.txtReceptor.Name = "txtReceptor";
+            this.txtReceptor.Size = new System.Drawing.Size(196, 20);
+            this.txtReceptor.TabIndex = 4;
+            // 
+            // lblReceptorReq
+            // 
+            this.lblReceptorReq.AutoSize = true;
+            this.lblReceptorReq.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceptorReq.ForeColor = System.Drawing.Color.Red;
+            this.lblReceptorReq.Location = new System.Drawing.Point(703, 73);
+            this.lblReceptorReq.Name = "lblReceptorReq";
+            this.lblReceptorReq.Size = new System.Drawing.Size(17, 19);
+            this.lblReceptorReq.TabIndex = 5;
+            this.lblReceptorReq.Text = "*";
+            // 
+            // lblEmisorReq
+            // 
+            this.lblEmisorReq.AutoSize = true;
+            this.lblEmisorReq.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmisorReq.ForeColor = System.Drawing.Color.Red;
+            this.lblEmisorReq.Location = new System.Drawing.Point(341, 74);
+            this.lblEmisorReq.Name = "lblEmisorReq";
+            this.lblEmisorReq.Size = new System.Drawing.Size(17, 19);
+            this.lblEmisorReq.TabIndex = 6;
+            this.lblEmisorReq.Text = "*";
+            // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(12, 165);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(126, 14);
+            this.lblInicio.TabIndex = 7;
+            this.lblInicio.Text = "Fecha Inicial De Emisión:";
+            // 
+            // lblFinEmision
+            // 
+            this.lblFinEmision.AutoSize = true;
+            this.lblFinEmision.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinEmision.Location = new System.Drawing.Point(390, 165);
+            this.lblFinEmision.Name = "lblFinEmision";
+            this.lblFinEmision.Size = new System.Drawing.Size(120, 14);
+            this.lblFinEmision.TabIndex = 8;
+            this.lblFinEmision.Text = "Fecha Final De Emisión:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(141, 161);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePicker1.TabIndex = 9;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(512, 161);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePicker2.TabIndex = 10;
+            // 
+            // pnlnewdowload
+            // 
+            this.pnlnewdowload.BackColor = System.Drawing.Color.White;
+            this.pnlnewdowload.Controls.Add(this.bntNext);
+            this.pnlnewdowload.Controls.Add(this.dateTimePicker2);
+            this.pnlnewdowload.Controls.Add(this.dateTimePicker1);
+            this.pnlnewdowload.Controls.Add(this.lblFinEmision);
+            this.pnlnewdowload.Controls.Add(this.lblInicio);
+            this.pnlnewdowload.Controls.Add(this.lblEmisorReq);
+            this.pnlnewdowload.Controls.Add(this.lblReceptorReq);
+            this.pnlnewdowload.Controls.Add(this.txtReceptor);
+            this.pnlnewdowload.Controls.Add(this.label9);
+            this.pnlnewdowload.Controls.Add(this.txtEmisor);
+            this.pnlnewdowload.Controls.Add(this.label8);
+            this.pnlnewdowload.Controls.Add(this.lblTipoFactura);
+            this.pnlnewdowload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlnewdowload.Location = new System.Drawing.Point(206, 40);
+            this.pnlnewdowload.Name = "pnlnewdowload";
+            this.pnlnewdowload.Size = new System.Drawing.Size(766, 452);
+            this.pnlnewdowload.TabIndex = 9;
+            this.pnlnewdowload.Visible = false;
+            // 
             // btnRemitidas
             // 
             this.btnRemitidas.BackColor = System.Drawing.Color.RoyalBlue;
@@ -436,6 +568,7 @@
             this.btnSiguiente.Text = "Continuar.";
             this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnBuscarServer
             // 
@@ -478,116 +611,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // directorsearch
-            // 
-            this.directorsearch.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorsearch.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorsearch.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // lblTipoFactura
-            // 
-            this.lblTipoFactura.AutoSize = true;
-            this.lblTipoFactura.Location = new System.Drawing.Point(315, 13);
-            this.lblTipoFactura.Name = "lblTipoFactura";
-            this.lblTipoFactura.Size = new System.Drawing.Size(57, 20);
-            this.lblTipoFactura.TabIndex = 0;
-            this.lblTipoFactura.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(75, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 19);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "RFC Emisor:";
-            // 
-            // txtEmisor
-            // 
-            this.txtEmisor.Enabled = false;
-            this.txtEmisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmisor.Location = new System.Drawing.Point(165, 74);
-            this.txtEmisor.Name = "txtEmisor";
-            this.txtEmisor.Size = new System.Drawing.Size(176, 20);
-            this.txtEmisor.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(394, 74);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 19);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "RFC Receptor:";
-            // 
-            // txtReceptor
-            // 
-            this.txtReceptor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceptor.Location = new System.Drawing.Point(505, 73);
-            this.txtReceptor.Name = "txtReceptor";
-            this.txtReceptor.Size = new System.Drawing.Size(196, 20);
-            this.txtReceptor.TabIndex = 4;
-            // 
-            // lblReceptorReq
-            // 
-            this.lblReceptorReq.AutoSize = true;
-            this.lblReceptorReq.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceptorReq.ForeColor = System.Drawing.Color.Red;
-            this.lblReceptorReq.Location = new System.Drawing.Point(703, 73);
-            this.lblReceptorReq.Name = "lblReceptorReq";
-            this.lblReceptorReq.Size = new System.Drawing.Size(17, 19);
-            this.lblReceptorReq.TabIndex = 5;
-            this.lblReceptorReq.Text = "*";
-            // 
-            // lblEmisorReq
-            // 
-            this.lblEmisorReq.AutoSize = true;
-            this.lblEmisorReq.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmisorReq.ForeColor = System.Drawing.Color.Red;
-            this.lblEmisorReq.Location = new System.Drawing.Point(341, 74);
-            this.lblEmisorReq.Name = "lblEmisorReq";
-            this.lblEmisorReq.Size = new System.Drawing.Size(17, 19);
-            this.lblEmisorReq.TabIndex = 6;
-            this.lblEmisorReq.Text = "*";
-            // 
-            // lblInicio
-            // 
-            this.lblInicio.AutoSize = true;
-            this.lblInicio.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicio.Location = new System.Drawing.Point(12, 165);
-            this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(126, 14);
-            this.lblInicio.TabIndex = 7;
-            this.lblInicio.Text = "Fecha Inicial De Emisión:";
-            // 
-            // lblFinEmision
-            // 
-            this.lblFinEmision.AutoSize = true;
-            this.lblFinEmision.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinEmision.Location = new System.Drawing.Point(390, 165);
-            this.lblFinEmision.Name = "lblFinEmision";
-            this.lblFinEmision.Size = new System.Drawing.Size(120, 14);
-            this.lblFinEmision.TabIndex = 8;
-            this.lblFinEmision.Text = "Fecha Final De Emisión:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 161);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(512, 161);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(236, 20);
-            this.dateTimePicker2.TabIndex = 10;
-            // 
             // bntNext
             // 
             this.bntNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -601,38 +624,17 @@
             this.bntNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntNext.UseVisualStyleBackColor = true;
             // 
-            // pnlnewdowload
-            // 
-            this.pnlnewdowload.BackColor = System.Drawing.Color.White;
-            this.pnlnewdowload.Controls.Add(this.bntNext);
-            this.pnlnewdowload.Controls.Add(this.dateTimePicker2);
-            this.pnlnewdowload.Controls.Add(this.dateTimePicker1);
-            this.pnlnewdowload.Controls.Add(this.lblFinEmision);
-            this.pnlnewdowload.Controls.Add(this.lblInicio);
-            this.pnlnewdowload.Controls.Add(this.lblEmisorReq);
-            this.pnlnewdowload.Controls.Add(this.lblReceptorReq);
-            this.pnlnewdowload.Controls.Add(this.txtReceptor);
-            this.pnlnewdowload.Controls.Add(this.label9);
-            this.pnlnewdowload.Controls.Add(this.txtEmisor);
-            this.pnlnewdowload.Controls.Add(this.label8);
-            this.pnlnewdowload.Controls.Add(this.lblTipoFactura);
-            this.pnlnewdowload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlnewdowload.Location = new System.Drawing.Point(206, 40);
-            this.pnlnewdowload.Name = "pnlnewdowload";
-            this.pnlnewdowload.Size = new System.Drawing.Size(766, 452);
-            this.pnlnewdowload.TabIndex = 9;
-            // 
             // pnlReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 493);
-            this.Controls.Add(this.pnlnewdowload);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlVisorReportes);
             this.Controls.Add(this.pnlDescargas);
+            this.Controls.Add(this.pnlnewdowload);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "pnlReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -648,10 +650,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDescargas)).EndInit();
             this.pnlVisorReportes.ResumeLayout(false);
             this.pnlVisorReportes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlnewdowload.ResumeLayout(false);
             this.pnlnewdowload.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -61,6 +61,12 @@
     <Compile Include="TipodeConsulta.Designer.cs">
       <DependentUpon>TipodeConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisorReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisorReporte.Designer.cs">
+      <DependentUpon>VisorReporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +82,9 @@
     </Compile>
     <EmbeddedResource Include="TipodeConsulta.resx">
       <DependentUpon>TipodeConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisorReporte.resx">
+      <DependentUpon>VisorReporte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,6 +131,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correcto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enviar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incorrecto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XMLCorrecto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noencontrados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duplicados.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
